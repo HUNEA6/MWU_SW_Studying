@@ -1,0 +1,102 @@
+변수
+- 우리가 직접 메모리에 할당하는 값
+변수 선언 키워드 var, let
+
+var - ES6 버전 이전에 사용하던 키워드(권장하진 않음: 호이스팅이라는 자바스크립트의 특이한 동작 때문)
+
+호이스팅이란?
+-  자바스크립트에서 코드를 실행하기 전 변수 및 함수 선언이 스코프의 최상단으로 끌어 올려지는 현상
+
+let - ES6 버전 이후에 나온 키워드
+
+
+ex) let variable = 126
+    (키워드) (변수명) (값)
+    (키워드) (메모리 상 주소) (주소에 해당하는 값)
+
+
+상수
+- 변하지 않는 수 (한번 값을 정의하면 새로운 값 대입 못한다.)
+상수 선언 키워드 const
+
+
+ex) const variable = 126
+    (키워드) (변수명) (값)
+
+
+자료형(어떤 데이터를 담을 수 있는지 알아보자)
+- Number, String, Boolean, Object, Array, Function, Undefined, Null
+
+ 
+Number
+- 숫자 타입
+let integer = 126
+let float = 1.26
+
+
+String
+- 문자 타입
+let string1 = "'string'";
+let string2 = '"string"';
+
+
+Boolean
+- True, False
+let bool1 = true;
+let bool2 = false;
+
+ 
+Object
+- 여러 값을 지닐 수 있는 타입
+let object = {
+
+	name: "Kim Gwan-Hun";
+
+};
+object['name'] // Kim Gwan-Hun
+
+ 
+Array
+- 여러 값을 가질 수 있는 타입
+- Object 타입과 다르게 키를 가지고있지 않고 인덱스를 통해 값을 찾을 수 있다.
+let array = [0, 1, 2, 'a', 'b', true]
+
+array[0]	// 0
+
+array[3]	// 'a'
+
+array[5]	// true
+
+
+Function
+- 함수를 변수로 담을 수 있는 타입
+let func = function() {
+
+	return 1;
+
+};
+
+
+Undefined, Null
+Undefined : 변수, 상수가 선언되었지만, 아무런 값도 대입되지 않은 경우
+Null: Null 값을 넣은 경우
+let a;
+
+console.log(a);	// undefined
+
+let b = null;
+
+console.log(b);	// null
+
+
+메모리
+
+할당 -> 사용 -> 해제
+
+1. 변수 생성 시 메모리 한 구역에 우리가 사용할 수 있도록 할당
+
+2. 우리는 할당된 메모리에 값을 넣어 사용
+
+3. 최종적으로 사용을 마치면 해제하여 메모리를 제거할 수있다.
+
+* 메모리는 한정되어 있으니 생각

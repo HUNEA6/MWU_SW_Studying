@@ -1,0 +1,12 @@
+이벤트 루프
+선택 과제
+- 비동기 작업은 Task Queue 뿐만 아니라 Microtask Queue, Animation frames에도 등록된다.
+- 여기서 Microtask Queue와 Animation frames가 무엇인지 조사하기
+
+Microtask Queue
+- Microtask Queue는 Promise나 async/await, process.nextTick, Object.observe, MutationObserver과 같은 비동기 호출을 넘겨받는다.
+그리고 Microtask의 우선순위는 일반 task(또는 macrotask)보다 더 높다.
+
+Animation frames
+- Animation Frames는 requestAnimationFrame과 같이 브라우저 렌더링과 관련된 task를 넘겨받는 Queue이다.
+우선순위는 Microtask보다는 낮고, (Macro)Task보다는 높다.

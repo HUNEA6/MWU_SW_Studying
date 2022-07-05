@@ -1,0 +1,31 @@
+네트워크 기초
+
+* 브라우저에 URL을 입력하면 발생하는 일
+1. URL을 해석한다.
+scheme://<user><password>@<host>:<port>/<url-path>
+
+2. DNS를 조회한다.
+DNS(Domain Name System)란?
+- 도메인과 IP주소를 서로 변환해준다.
+
+3. 해당 IP가 존재하는 서버로 이동한다.
+
+4. ARP를 이용하여 MAC 주소 변환을 한다.
+ARP(Address Resolution Protocol)란?
+- 논리 주소인 IP를 물리 주소인 MAC 주소로 변환하는 프로토콜
+
+5. TCP 통신을 통해 Socket을 열어야 한다.
+
+6. 서버는 응답을 반환한다.
+
+7. 브라우저는 렌더링한다.
+
+선택과제!
+- http가 있음에도 https가 왜 탄생했는지 조사하기
+- https가 생김으로 인해 기존 과정에서 무엇이 추가되었는지 조사하기
+
+* HTTP는 하이퍼 텍스트 전송 프로토콜(HyperText Transfer Protocol)의 약자로 웹서핑할 때 서버에서 브라우저로 데이터를
+전송해주는 용도로 우리가 가장 많이 사용하고 있는 웹 사이트 기본 프로토콜이다.
+
+* HTTPS는 하이퍼 텍스트 전송 프로토콜 보안(HyperText Transfer Protocol Secure)의 약자로 HTTP의 단점인 정보 암호화가
+되지 않는 점을 SSL을 사용하여 보안성이 HTTP대비 높다.
