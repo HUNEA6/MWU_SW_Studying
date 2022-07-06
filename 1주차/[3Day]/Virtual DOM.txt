@@ -4,3 +4,4 @@ Virtual DOM
 
 알아두면 좋은 것
 - document.createDocumentFragment가 하는 일은?
+- 화면 밖의 DOM 트리를 작성하기 위해 DOM 노드를 추가할 수 있는 빈 DocumentFragment를 새로 만듭니다.
