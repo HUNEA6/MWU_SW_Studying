@@ -1,0 +1,33 @@
+
+.toolbar {
+    width: 600px;
+    height: 40px;
+    padding: 8px;
+    border-radius: 4px;
+    background-color:bisque;
+    box-sizing: border-box;
+}
+
+.toolbar button {
+    height: 24px;
+    border: 2px solid black;
+    cursor: pointer;
+    background-color: white;
+}
+
+.toolbar button:hover {
+    background-color: gray;
+}
+
+.editor {
+    width: 600px;
+    height: 600px;
+    padding: 16px;
+    margin-top: 8px;
+    border: 2px solid black;
+    box-sizing: border-box;
+    outline: none;
+    font-size: 12px;
+    border-radius: 4px;
+
+}

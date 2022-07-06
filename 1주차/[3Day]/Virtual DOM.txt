@@ -1,0 +1,6 @@
+Virtual DOM
+- 실제 DOM Tree를 JavaScript 객체로 만든 것으로 필요한 정보만 담아서 만들어진 것이다. 
+- 이벤트나 DOM이 수정되는 것에 대해 직접 DOM을 수정하지 않고 Virtual DOM을 바뀐 부분만 수정한 후 랜더링하면 브라우저 랜더링 프로세스가 줄어드는 장점이있다.
+
+알아두면 좋은 것
+- document.createDocumentFragment가 하는 일은?

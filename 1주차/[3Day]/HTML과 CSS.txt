@@ -1,0 +1,33 @@
+HTML과 CSS
+HTML(Hyper Text Markup Language)
+- 구조(Structure)와 의미(Semantic)로만 남게되었다.
+
+HTML5
+- 2014년 10월 28일에 표준안이 확정되었다.
+- 영상과 음성을 처리하기 위한 멀티미디어 요소가 추가되었다.
+- 구조적인 요소가 추가되었다.
+- 표현을 담당하던 태그가 삭제되고 의미를 담은 태그가 추가되었다.
+
+* 태그마다 기본 스타일이 있다. (ex: li, ul)
+태그마다 기본 스타일이 있는 것이 마음에 들지 않는다면
+https://meyerweb.com/eric/tools/css/reset/
+모든 HTML 속성을 제거해준다.
+
+* 브라우저마다 미묘하게 기본 스타일이 다르다.
+마음에 들지 않는다면
+http://necolas.github.io/normalize.css/
+브라우저간 차이를 통일시켜 준다.
+
+CSS(Cascading Style Sheets)
+- 스타일이 정의 되는 우선순위나 해당하는 스타일을 스타일시트에 기록할 수 있다.
+* 간혹 특정상황에서 어떻게 해야할지 막막하면
+https://codepen.io/
+참조
+
+HTML과 CSS 공부 방법은?
+- 사례 외우기!(ex 레이아웃 잡는 법, 특정상황 가운데 정렬 등등..)
+
+이후에 알아볼 것
+- CSS에서 id와 class의 차이점은?
+- 만약 id가 여러 개 있다면 어떻게 처리될까?
+- CSS의 선택자 종류 알아보기
