@@ -1,0 +1,20 @@
+자료구조 & 알고리즘 - 큐
+
+큐
+- First In First Out이라는 개념을 가진 선형 자료구조다.
+- Linear Queue와 Circular Queue가 존재한다.
+
+선형 큐(Linear Queue)
+1. Array로 표현하기
+Linear Queue를 Array로 표현할 수 있다.
+- 배열 순서대로 값이 들어오고, DeQueue로 인해 삭제가 된 뒤, 다시 EnQueue가 되면 앞에 빈 공간에 값이 들어가는 것이 아닌 뒤에 배열 자리수로 들어간다.
+
+2. Linked List로 표현하기
+- Linear Queue를 Linked List로 표현할 수 있다.
+- 연결 리스트를 사용하면 배열과 다르게 인덱스에 대한 고민은 하지 않아도 된다.
+
+JavaScript에서 큐 사용 방법
+1. Array로 구현하기
+- QueueArray.js
+
+

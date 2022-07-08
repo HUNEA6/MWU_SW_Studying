@@ -1,0 +1,21 @@
+스택
+- Last in First Out 이라는 개념을 가진 선형 자료구조다.
+- 바닥이 막힌 상자를 생각하면 편하다.
+
+스택 동작 원리
+- img 참조
+
+ 스택 Array로 표현하기
+- 스택을 Array로 표현할 수 있다.(img 참조)
+
+스택 Linked List로 표현하기
+- 스택을 Linked List로 표현할 수 있다. (img 참조)
+
+JavaScript에서 스택 사용 방법
+1. 배열(Array)로 구현
+- img 참조
+
+2. Linked List로 구현
+- head를 Top으로 지정하고 제거 요소에서 head만 제거하도록 수정하면 된다.
+- img 참조
+
