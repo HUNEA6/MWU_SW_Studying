@@ -17,4 +17,10 @@ JavaScript에서 큐 사용 방법
 1. Array로 구현하기
 - QueueArray.js
 
+2. Linked List로 구현하기
+- QueueLinkedList.js
+
+환형 큐(Circular Queue)
+- Front와 Rear가 이어져있는 Queue
+- 환형 큐는 Linked List로 구현했을 때 이점이 없다.
 
