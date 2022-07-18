@@ -1,0 +1,10 @@
+var, let, const의 차이
+var - function scope.
+변수 재할당 가능
+
+let - block scope.
+변수 재할당 가능
+
+const - block scope.
+- 변수 재할당 불가능
+
