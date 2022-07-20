@@ -41,73 +41,55 @@
 
 
 // 선언형 프로그래밍
-function ToggleButton({$target,text, onClick}) {
+function ToggleButton({$target, text, onClick}) {
     const $button = document.createElement('button')
     $target.appendChild($button)
-    let clickCount = 0
+    let clickCount = 0;
 
-    this.state = {
-        clickCount:0,
-        toggled: false
-    }
-    this.setState = (nextState) => {
-        this.state = nextState
-        this.render()
-    }
-    this.render= () => {
+    this.render = () => {
         $button.textContent = text
-        
-        $button.style.textDecoration = this.state.toggled ?  'line-through': 'none'
     }
-        
 
-        $button.addEventListener('click', () => {
-            this.setState({
-                clickCount: this.state.clickCount + 1,
-                toggled: !this.state.toggled
-            })
-            
-            clickCount++
-            if($button.style.textDecoration === 'line-through'){
-                $button.style.textDecoration = ''
-            } else {
-                $button.style.textDecoration = 'line-through'
-            }
-
-            if(onClick) {
-                onClick(clickCount)
-            }
-            // if(clickCount %3 === 0){
-            //     alert('3번째 클릭!')
-            // }
-        })
+    $button.addEventListener('click', () =>{
+        clickCount++
+        if($button.style.textDecoration === 'line-through'){
+            $button.style.textDecoration = 'none'
+        }else {
+            $button.style.textDecoration = 'line-through'
+        }
+        if(onClick){
+            onClick(clickCount)
+        }
+    })
 
     this.render()
 }
 
-const $app = document.querySelector("body")
+const $app = document.querySelector('body')
 
 new ToggleButton({
     $target: $app,
-    text: 'Button1',
+    text: '버튼1',
     onClick: (clickCount) => {
         if(clickCount % 3 === 0){
-            alert("3번째 클릭!")
+            alert('3번째 클릭!')
         }
     }
 })
-
 new ToggleButton({
     $target: $app,
-    text: 'Button2'
+    text: '버튼2',
+    onClick: (clickCount) => {
+        if(clickCount % 2 === 0){
+            alert('두번째 클릭')
+        }
+    }
 })
-
 new ToggleButton({
     $target: $app,
-    text: 'Button3'
+    text: '버튼3',
 })
-
 new ToggleButton({
     $target: $app,
-    text: 'Button4'
+    text: '버튼4',
 })
