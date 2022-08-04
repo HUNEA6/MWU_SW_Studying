@@ -1,6 +1,5 @@
-export default function TodoComments ({ $target, initialState }){
+export default function todoComments({ $target, initialState}){
     const $element = document.createElement('div')
-   
     $target.appendChild($element)
 
     this.state = initialState
@@ -11,16 +10,20 @@ export default function TodoComments ({ $target, initialState }){
     }
 
     this.render = () => {
-        const {selectedTodo, comments} = this.state
+        const { selectedTodo, comments } = this.state
 
+        if(!selectedTodo || !comments){
+            $element.innerHTML = ''
+            return
+        }
         $element.innerHTML = `
             <h2>${selectedTodo.text}의 댓글들</h2>
+            ${comments.length === 0 ? '댓글이 없습니다.' : ''}
             <ul>
-                ${comments.map(({ text }) => `<li>${text}</li>`).join('')}
+                ${comments.map(({contents}) => `<li>${content}</li>`).join('')}
             </ul>
         `
     }
 
     this.render()
-    
 }
