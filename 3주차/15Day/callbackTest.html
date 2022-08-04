@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title> CallBack Test</title>
+    </head>
+    <body>
+        <script>
+            function work() {
+            // 첫 번째 인자로 넘겨진 함수는 바로 실행되지 않고, setTimeout 혹은 setTimeout의 시간만큼 지난 후에 실행된다.
+            console.log('Work!!!')
+            }
+            setTimeout(work, 1000)
+            setInterval(work, 5000)
+
+            // 먼저 실행 된다.
+            console.log('work process')
+
+        </script>
+    </body>
+</html>
