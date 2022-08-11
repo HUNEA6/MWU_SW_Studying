@@ -28,4 +28,4 @@ export default function todoList({ $target, initialState, onClick}){
     }
 
     this.render()
-}
+} 
