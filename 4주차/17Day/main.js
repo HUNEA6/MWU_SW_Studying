@@ -8,3 +8,4 @@ new ProductPage({
         productId: 1
     }
 })
+
