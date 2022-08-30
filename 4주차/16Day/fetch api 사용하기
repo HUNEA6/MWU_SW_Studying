@@ -1,0 +1,4 @@
+fetch는 HTTP error가 발생하더라도 reject 되지 않는다.
+네트워크 에러나 요청이 완료되지 못한 경우에만 reject 된다.
+그러므로 서버 요청 중 에러가 생겼을 경우에도 then으로 떨어지므로,
+ response의 status code 나 ok를 체크해주는 것이 좋다. 
