@@ -1,0 +1,4 @@
+pushState와 replaceState는 다음 페이지를 화면 이동 없이 URL만 바꿀 수 있는 특징이 있다.
+
+* replaceState는 pushState와 달리, 페이지 URL을 바꾸면서 이 전 페이지로 가지 못하게 하는 특징이 있다.
+(로그인 페이지 등 에서 사용)
