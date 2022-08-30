@@ -8,36 +8,34 @@
  */
 
  export default function Cart({ $target, initialState, onRemove }) {
-    const $cart = document.createElement("div");
+    const $cart = document.createElement("div")
   
-    $target.appendChild($cart);
+    $target.appendChild($cart)
   
-    this.state = initialState;
+    this.state = initialState
   
     this.setState = (nextState) => {
-      this.state = nextState;
-      this.render();
+      this.state = nextState
+      this.render()
     };
   
     const calculateTotalPrice = () => {
-      const { basePrice, selectedOptions } = this.state;
+      const { basePrice, selectedOptions } = this.state
   
       return selectedOptions.reduce(
-        (acc, option) => acc + (basePrice + option.optionPrice) * option.ea,
-        0
-      );
-    };
+        (acc, option) => acc + (basePrice + option.optionPrice) * option.ea, 0)
+    }
   
     const renderOption = (option, index) => {
-      const { productName, basePrice } = this.state;
+      const { productName, basePrice } = this.state
       return `
       <li data-index="${index}" class="cartItem">
       ${productName} - ${option.optionName} | 
       ${basePrice + option.optionPrice}원, ${option.ea}개
       <button class="remove">x</button>
       </li>
-      `;
-    };
+      `
+    }
   
     this.render = () => {
       const { selectedOptions } = this.state;
@@ -54,20 +52,20 @@
       <div>
          ${calculateTotalPrice()}     
       </div>
-      `;
+      `
   
       $cart.querySelectorAll(".remove").forEach(($button) => {
         $button.addEventListener("click", (e) => {
-          const $li = e.target.closest(".cartItem");
+          const $li = e.target.closest(".cartItem")
   
           if ($li) {
             const { index } = $li.dataset;
   
-            onRemove(parseInt(index));
+            onRemove(parseInt(index))
           }
-        });
-      });
-    };
+        })
+      })
+    }
   
-    this.render();
+    this.render()
   }

@@ -21,7 +21,7 @@ export default function ProductPage({ $target, initialState }) {
       onSelect: (option) => {
         const nextState = { ...this.state };
   
-        const { selectedOptions } = nextState;
+        const  { selectedOptions } = nextState;
   
         const selectedOptionIndex = selectedOptions.findIndex(
           (selectedOption) => selectedOption.optionId === option.optionId
@@ -56,7 +56,7 @@ export default function ProductPage({ $target, initialState }) {
           selectedOptionIndex,
           1
         );
-        this.setState(nextState);
+        this.setState(nextState)
       },
     });
   
