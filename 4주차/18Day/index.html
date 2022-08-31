@@ -1,0 +1,38 @@
+<html>
+    <body>
+        <div id="container"></div>
+        <a class="LinkItem" href="/product-list">product list</a>
+        <a class="LinkItem" href="/article-list">article list</a>
+        <script>
+            function route() {
+                const { pathname } = location
+                const $container = document.querySelector('#container')
+                    if(pathname === '/') {
+                        $container.innerHTML = '<h1>Home</h1>'
+                    } else if (pathname === '/product-list') {
+                        $container.innerHTML = '<h1>상품 목록</h1>'
+                    } else if (pathname === '/article-list') {
+                        $container.innerHTML = '<h1>게시글 목록</h1>'
+                    }
+            }
+
+            route()
+            window.addEventListener('click', e => {
+                // a class를 클릭했을 때만 기능
+                if(e.target.className === 'LinkItem'){
+                    // a태그는 클릭 했을 때 href로 이동하려는 성질이 있는데, preventDefault를 선언한 순간 이동하지 않게 된다.
+                    e.preventDefault();
+
+                    const {href} = e.target
+                    const path = href.replace(window.location.origin, '')
+
+                    history.pushState(null, null, path)
+                    route()
+                }
+            })
+            
+            //앞,뒤으로 가는 이벤트처리
+            window.addEventListener('popstate', () => route())
+        </script>
+    </body>
+</html>
