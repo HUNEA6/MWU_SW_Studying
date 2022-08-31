@@ -1,6 +1,5 @@
 export default function ProductOptions({ $target, initialState, onSelect})  {
     const $select = document.createElement('select')
-    
     $target.appendChild($select)
 
     /* 
@@ -8,13 +7,14 @@ export default function ProductOptions({ $target, initialState, onSelect})  {
     *  재고가 0인 상품의 경우 옵션을 선택하지 못하게 함
     *  [
     *   {
-    *       optionid : '1',
+    *       optionId: 1,
     *       optionName : '옵션 상품',
     *       optionPrice: 1000,
     *       stock: 10
     *   },
     *   ....
     *  ]
+    * 
     */
     this.state = initialState
 
