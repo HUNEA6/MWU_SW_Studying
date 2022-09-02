@@ -19,9 +19,11 @@ new Editor ({
     $target,
     inititalState: post,
     onEditing: (post) => {
-        setItem(TEMP_POST_SAVE_KEY, {
-            ...post,
-            tempSaveDate: new Date()
-        })
-    } 
+        timer = setTimeout(() => {
+            setItem(TEMP_POST_SAVE_KEY, {
+                ...post,
+                tempSaveDate: new Date()
+                })
+            }, 500)  
+        } 
 })
